@@ -15,4 +15,4 @@ project with nextjs, typescript, graphQL, apollo, zustand, among other tech.
 
 | table | column |
 | ----- | ------ |
-| Hello | Hi    |
+| Hello | Hi     |
