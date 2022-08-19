@@ -11,7 +11,7 @@ const post: Post = {
   snippet: 'Hello everybody'
 }
 
-export default function Home() {
+export default function BlogPostPage() {
   return (
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
       <p class={tw`text-gray-600 mt-12`}>{post.publishAt.toLocaleDateString()}</p>
