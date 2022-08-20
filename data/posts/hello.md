@@ -4,7 +4,7 @@ publish_at: 2022-08-19T05:46:38.889Z
 snippet: This is the first post.
 ---
 
-This is my first blog post on my _new_ blog
+This is my first blog post on my *new* blog
 
 ### Hello World
 

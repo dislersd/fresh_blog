@@ -16,3 +16,9 @@ project with nextjs, typescript, graphQL, apollo, zustand, among other tech.
 | table | column |
 | ----- | ------ |
 | Hello | Hi     |
+
+I'm building this blog with Deno and Fresh and deploying using Deno Deploy. This
+blog post is written in markdown.
+
+Deno is nice because it has a lot of built in tools like formatting, testing,
+permissions, etc. built in.

@@ -16,7 +16,7 @@ export default function Home(props: PageProps<Post[]>) {
   const posts = props.data
   return (
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <h1 class={tw`text-5xl mt-12 font-bold bg-blue-100 p-4 w-full`} >{COPY.BLOG_TITLE}</h1>
+      <h1 class={tw`text-5xl font-bold bg-blue-100 p-4 w-full`} >{COPY.BLOG_TITLE}</h1>
       <ul class={tw`mt-8`}>
         {posts.map(post => <PostEntry post={post} />)}
       </ul>
