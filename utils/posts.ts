@@ -34,6 +34,7 @@ export async function loadPost(id: string): Promise<Post | null> {
 export async function listPosts(): Promise<Post[]> {
   const promises = [];
   for await (const entry of Deno.readDir("./data/posts")) {
+    //slicing off the ".md"
     const id = entry.name.slice(0, -3);
     promises.push(loadPost(id));
   }
