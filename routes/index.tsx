@@ -15,8 +15,8 @@ export const handler: Handlers<Post[]> = {
 export default function Home(props: PageProps<Post[]>) {
   const posts = props.data
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <h1 class={tw`text-5xl font-bold bg-blue-100 p-4 w-full`} >{COPY.BLOG_TITLE}</h1>
+    <div class={tw`p-4 mx-auto max-w-screen-md bg-black`}>
+      <h1 class={tw`text-5xl font-bold bg-white p-4 w-full`} >{COPY.BLOG_TITLE}</h1>
       <ul class={tw`mt-8`}>
         {posts.map(post => <PostEntry post={post} />)}
       </ul>
@@ -30,14 +30,15 @@ function PostEntry(props: { post: Post }) {
     dateStyle: 'short',
   });
   return (
-    <li class={tw`border-t`} >
-      <a href={`/blog/${post.id}`} class={tw`py-2 flex gap-4 group`}>
-        <div>{dateFmt.format(post.publishAt)}</div>
+
+    <a href={`/blog/${post.id}`} class={tw`py-2 flex-column gap-4`}>
+      <li class={tw`text-white border border-solid rounded my-4 p-4 group`} >
+        <div class={tw`mb-4`}>{dateFmt.format(post.publishAt)}</div>
         <div>
-          <h2 class={tw`font-bold text-xl group-hover:underline`}>{post.title}</h2>
-          <p class={tw`text-gray-600`}>{post.snippet}</p>
+          <h2 class={tw`font-bold text-xl group-hover:underline group-hover:bg-pink-100 group-hover:text-black`}>{post.title}</h2>
+          <p class={tw`text-pink-300`}>{post.snippet}</p>
         </div>
-      </a>
-    </li >
+      </li >
+    </a>
   )
 }

@@ -4,6 +4,7 @@ import { Handlers, PageProps } from '$fresh/server.ts'
 import { tw } from "@twind";
 import { loadPost, Post } from "../../utils/posts.ts";
 import * as gfm from "https://deno.land/x/gfm@0.1.22/mod.ts";
+import { COPY } from "../../constants.ts";
 
 
 export const handler: Handlers<Post> = {
@@ -25,7 +26,7 @@ export default function BlogPostPage(props: PageProps) {
   const html = gfm.render(post.content)
   return (
     <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <a href="/">home</a>
+      <a href="/" class={tw`hover:bg-green-100 py-2`} >{COPY.HOME}</a>
       <p class={tw`text-gray-600 mt-12`}>
         {dateFmt.format(post.publishAt)}
       </p>
