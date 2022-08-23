@@ -15,8 +15,8 @@ export const handler: Handlers<Post[]> = {
 export default function Home(props: PageProps<Post[]>) {
   const posts = props.data
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md bg-black`}>
-      <h1 class={tw`text-5xl font-bold bg-white p-4 w-full`} >{COPY.BLOG_TITLE}</h1>
+    <div class={tw`p-4 mx-auto h-full bg-black`}>
+      <h1 class={tw`text-5xl text-white font-bold p-4 w-full`} >{COPY.BLOG_TITLE}</h1>
       <ul class={tw`mt-8`}>
         {posts.map(post => <PostEntry post={post} />)}
       </ul>
