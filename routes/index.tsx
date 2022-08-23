@@ -35,7 +35,7 @@ function PostEntry(props: { post: Post }) {
       <li class={tw`text-white border border-solid rounded my-4 p-4 group`} >
         <div class={tw`mb-4`}>{dateFmt.format(post.publishAt)}</div>
         <div>
-          <h2 class={tw`font-bold text-xl group-hover:underline group-hover:bg-pink-100 group-hover:text-black`}>{post.title}</h2>
+          <h2 class={tw`font-bold text-xl max-w-screen-sm group-hover:underline group-hover:bg-pink-100 group-hover:text-black`}>{post.title}</h2>
           <p class={tw`text-pink-300`}>{post.snippet}</p>
         </div>
       </li >

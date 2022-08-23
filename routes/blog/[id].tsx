@@ -25,12 +25,12 @@ export default function BlogPostPage(props: PageProps) {
   });
   const html = gfm.render(post.content)
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
+    <div class={tw`p-4 mx-auto max-w-screen-md bg-white h-full w-full`}>
       <a href="/" class={tw`hover:bg-green-100 py-2`} >{COPY.HOME}</a>
       <p class={tw`text-gray-600 mt-12`}>
         {dateFmt.format(post.publishAt)}
       </p>
-      <h1 class={tw`text-5xl mt-5 font-bold`} >{post.title}</h1>
+      <h2 class={tw`text-5xl mt-5 font-bold`} >{post.title}</h2>
       <style dangerouslySetInnerHTML={{ __html: gfm.CSS }} />
       <div class={tw`mt-12` + " markdown-body"} dangerouslySetInnerHTML={{ __html: html }} />
     </div>
